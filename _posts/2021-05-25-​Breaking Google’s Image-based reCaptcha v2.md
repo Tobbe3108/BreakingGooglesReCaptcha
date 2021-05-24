@@ -1,6 +1,6 @@
 ﻿# Breaking Google’s Image-based reCaptcha v2
 
-I dette projekt har vi valgt at vi vil forsøge at bryde Google’s reCAPTCHA v2 med et neuralt netværk.  
+I dette projekt har vi valgt at vi vil forsøge at bryde Google’s reCAPTCHA v2 med et neuralt netværk.
 reCAPTCHA tester den menneskelige evne til at genkende objekter på billeder, derfor er det en oplagt opgave at forsøge at løse med et neuralt netværk.
 Mange virksomheder er for længst skiftet væk fra reCAPTCHA v2 til andre bedre alternativer, men man støder stadig ofte på denne reCAPTCHA.
 
