@@ -59,7 +59,7 @@ Med Convolutional Neural Networks findes der mange strategier man kan bruge til 
 I vores projekt har vi brugt den indbygget cnn learner for multi category block.
 Vi bruger Multi Category Block da det var et krav men også lader os benytte vores ressourcer bedre da vi kan tjekke hvad Recapture spørg efter samtidig med billederne bliver labeled.
 
-![]({{ site.baseurl }}/images/Screenshot_1.png "")
+![]({{ site.url }}/{{ site.baseurl }}/images/Screenshot_1.png "")
 
 Mens vi undersøgte hvordan vi optimerer vores model valgte vi at lave et mindre datasæt end havde vi oprindeligt fandt. 
 Dette gjorde at vi kunne iterere hurtigere da det tog kortere tid at træne når vi laver ændringer i vores lærings parameter.
@@ -67,7 +67,7 @@ Ulemper med denne tilgang er tendenser i vores træning sæt bliver forstærket 
 Dette gjorde hvis der var en bro og en bil på samme billede, ville den kun vælge den ene frem for begge. Mere om dette under Prediction afsnittet.
 Vi er endt med en model det svare med Multi Category Block og bruger fastai’s indbyggede cnn lerner, og for hurtig iteration har vi et mindre datasæt.
 
-![]({{ site.baseurl }}/images/Screenshot_2.png "")
+![]({{ site.url }}/{{ site.baseurl }}/images/Screenshot_2.png "")
 
 
 
@@ -90,7 +90,7 @@ Dette giver et indblik i hvordan CNN bedst kan lærer ud fra vores data på den 
 
 
 ## Evaluation
-[Baseline model notebook]({{ site.baseurl }}/2021/05/25/Captcha-Baseline-Model.html/)
+[Baseline model notebook]({{ site.url }}/{{ site.baseurl }}/2021/05/25/Captcha-Baseline-Model.html/)
 
 For ikke at skulle træne modellen på alle 10.000 billeder hver gang da det taget lang tid har vi lavet et datasæt der tager 20 billeder fra hver kategori.
 Dette datasæt har vi efterfølgende brugt til vores aktive udvikling.
@@ -115,10 +115,10 @@ Vi har alligevel valgt at beholde denne model som vores baseline model på trods
 
 
 ## Tuning / Optimisation
-[MixUp notebook]({{ site.baseurl }}/2021/05/25/Captcha-MixUp.html/)  
-[Label Smoothing v1 notebook]({{ site.baseurl }}/2021/05/25/Captcha-LabelSmoothing.html/)  
-[Label Smoothing v2 notebook]({{ site.baseurl }}/2021/05/25/Captcha-Label-Smoothing-v2.html/)  
-[Label Correction notebook]({{ site.baseurl }}/2021/05/25/Captcha-Label-Correction.html/) 
+[MixUp notebook]({{ site.url }}/{{ site.baseurl }}/2021/05/25/Captcha-MixUp.html/)  
+[Label Smoothing v1 notebook]({{ site.url }}/{{ site.baseurl }}/2021/05/25/Captcha-LabelSmoothing.html/)  
+[Label Smoothing v2 notebook]({{ site.url }}/{{ site.baseurl }}/2021/05/25/Captcha-Label-Smoothing-v2.html/)  
+[Label Correction notebook]({{ site.url }}/{{ site.baseurl }}/2021/05/25/Captcha-Label-Correction.html/) 
 
 Med vores nyoprettet baseline model, justerer vi vores forskellige parameter for at opnå det bedste resultat.
 For at sikre imod at vores model blev for sikker og “overfitted”, brugte vi Label Smoothing undervejs i træningen for at gøre modellen mere modtagelig over for et mere nuanceret gæt i sidste ende, sådan at modellen kan være bedre til at gætte på andre mulige resultater i de billeder, som vi skal genkende.
@@ -144,34 +144,34 @@ I stedet for at læse html siden med Python downloade vi billedet og manuelt spl
 Vi endte med det nedenstående resultat, den fangede næsten alle cyklerne den eneste den mistede var 2,3.
 Dette kunne skyldes at vi ikke bruger hele vore dataset da vi trænede denne model men i stedet vores mindre træningssæt.
 
-![]({{ site.baseurl }}/images/Screenshot_3.png "")  
+![]({{ site.url }}/{{ site.baseurl }}/images/Screenshot_3.png "")  
 Image: 1, 1.jpg Prediction: ['Bicycle']; Bicycle Probability: 0.9659770131111145  
 Image: 1, 2.jpg Prediction: ['Bicycle']; Bicycle Probability: 0.9705190062522888  
 Image: 1, 3.jpg Prediction: ['Bridge']; Bicycle Probability: 4.990302880554836e-18  
 
-![]({{ site.baseurl }}/images/Screenshot_4.png "")  
+![]({{ site.url }}/{{ site.baseurl }}/images/Screenshot_4.png "")  
 Image: 2, 1.jpg Prediction: ['Palm']; Bicycle Probability: 0.044423192739486694  
 Image: 2, 2.jpg Prediction: []; Bicycle Probability: 0.4902642071247101  
 Image: 2, 3.jpg Prediction: []; Bicycle Probability: 0.20381507277488708  
 
-![]({{ site.baseurl }}/images/Screenshot_5.png "")  
+![]({{ site.url }}/{{ site.baseurl }}/images/Screenshot_5.png "")  
 Image: 3, 1.jpg Prediction: ['Palm']; Bicycle Probability: 0.007280856370925903  
 Image: 3, 2.jpg Prediction: ['Crosswalk']; Bicycle Probability: 0.00545891746878624  
 Image: 3, 3.jpg Prediction: ['Chimney']; Bicycle Probability: 0.003270353190600872  
 
 Vi prøvede igen men en model der var trænet på hele vores datasæt og det så meget mere lovende ud.
 
-![]({{ site.baseurl }}/images/Screenshot_3.png "")  
+![]({{ site.url }}/{{ site.baseurl }}/images/Screenshot_3.png "")  
 Image: 1, 1.jpg Prediction: ['Bicycle']; Bicycle Probability: 0.9953802824020386  
 Image: 1, 2.jpg Prediction: ['Bicycle']; Bicycle Probability: 0.9892680048942566  
 Image: 1, 3.jpg Prediction: ['Bridge']; Bicycle Probability: 0.0003413711965549737  
 
-![]({{ site.baseurl }}/images/Screenshot_4.png "")  
+![]({{ site.url }}/{{ site.baseurl }}/images/Screenshot_4.png "")  
 Image: 2, 1.jpg Prediction: ['Palm']; Bicycle Probability: 0.0001781134633347392  
 Image: 2, 2.jpg Prediction: ['Car']; Bicycle Probability: 0.003861015196889639  
 Image: 2, 3.jpg Prediction: ['Bicycle']; Bicycle Probability: 0.8249829411506653  
 
-![]({{ site.baseurl }}/images/Screenshot_5.png "")
+![]({{ site.url }}/{{ site.baseurl }}/images/Screenshot_5.png "")
 Image: 3, 1.jpg Prediction: ['Car']; Bicycle Probability: 0.0001316472189500928  
 Image: 3, 2.jpg Prediction: ['Crosswalk']; Bicycle Probability: 0.0038241292349994183  
 Image: 3, 3.jpg Prediction: ['Other']; Bicycle Probability: 0.0007099288050085306  
@@ -197,7 +197,7 @@ Hvis vi prøver helt simpelt at overføre dette til vores neurale netværk vil d
 Vi udregner gradienten for den data og bruger den til at opdatere modellens weights.
 Vi gør så det hele igen med en anden lille del af vores data. Denne proces kan illustreres på følgende måde:
 
-![]({{ site.baseurl }}/images/Screenshot_6.png "")
+![]({{ site.url }}/{{ site.baseurl }}/images/Screenshot_6.png "")
 
 1. Init: Da vi skal have et udgangspunkt for vores weights bliver de i dette step initialiseret til tilfældige værdiger.
 1. Predict: I dette step bruger vi de tilfældige weights til at få en prediction ved at køre en lille del af dataen igennem det neurale netværk.
