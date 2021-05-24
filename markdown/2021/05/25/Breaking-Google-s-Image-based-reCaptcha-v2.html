@@ -1,10 +1,139 @@
-<h1 id="breaking-googles-image-based-recaptcha-v2">Breaking Google’s Image-based reCaptcha v2</h1>
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Breaking Google’s Image-based reCaptcha v2 | fastpages</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="Breaking Google’s Image-based reCaptcha v2" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Breaking Google’s Image-based reCaptcha v2." />
+<meta property="og:description" content="Breaking Google’s Image-based reCaptcha v2." />
+<link rel="canonical" href="https://tobbe3108.github.io/BreakingGooglesRecaptcha/markdown/2021/05/25/Breaking-Google-s-Image-based-reCaptcha-v2.html" />
+<meta property="og:url" content="https://tobbe3108.github.io/BreakingGooglesRecaptcha/markdown/2021/05/25/Breaking-Google-s-Image-based-reCaptcha-v2.html" />
+<meta property="og:site_name" content="fastpages" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-05-25T00:00:00-05:00" />
+<script type="application/ld+json">
+{"description":"Breaking Google’s Image-based reCaptcha v2.","url":"https://tobbe3108.github.io/BreakingGooglesRecaptcha/markdown/2021/05/25/Breaking-Google-s-Image-based-reCaptcha-v2.html","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://tobbe3108.github.io/BreakingGooglesRecaptcha/markdown/2021/05/25/Breaking-Google-s-Image-based-reCaptcha-v2.html"},"headline":"Breaking Google’s Image-based reCaptcha v2","dateModified":"2021-05-25T00:00:00-05:00","datePublished":"2021-05-25T00:00:00-05:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/BreakingGooglesRecaptcha/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://tobbe3108.github.io/BreakingGooglesRecaptcha/feed.xml" title="fastpages" /><link rel="shortcut icon" type="image/x-icon" href="/BreakingGooglesRecaptcha/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/BreakingGooglesRecaptcha/">fastpages</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/BreakingGooglesRecaptcha/about/">About Me</a><a class="page-link" href="/BreakingGooglesRecaptcha/search/">Search</a><a class="page-link" href="/BreakingGooglesRecaptcha/categories/">Tags</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Breaking Google’s Image-based reCaptcha v2</h1><p class="page-description">Breaking Google’s Image-based reCaptcha v2.</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2021-05-25T00:00:00-05:00" itemprop="datePublished">
+        May 25, 2021
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      18 min read
+    
+</span></p>
+
+    
+      <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
+      
+        <a class="category-tags-link" href="/BreakingGooglesRecaptcha/categories/#markdown">markdown</a>
+        
+      
+      </p>
+    
+
+    </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <ul class="section-nav">
+<li class="toc-entry toc-h1"><a href="#breaking-googles-image-based-recaptcha-v2">Breaking Google’s Image-based reCaptcha v2</a>
+<ul>
+<li class="toc-entry toc-h2"><a href="#collect-data">Collect Data</a></li>
+<li class="toc-entry toc-h2"><a href="#prepare-the-data">Prepare the data</a></li>
+<li class="toc-entry toc-h2"><a href="#choose-the-model">Choose the model</a></li>
+<li class="toc-entry toc-h2"><a href="#train-your-machine-model">Train your machine model</a></li>
+<li class="toc-entry toc-h2"><a href="#evaluation">Evaluation</a></li>
+<li class="toc-entry toc-h2"><a href="#tuning--optimisation">Tuning / Optimisation</a></li>
+<li class="toc-entry toc-h2"><a href="#prediction">Prediction</a></li>
+<li class="toc-entry toc-h2"><a href="#neurale-netværk">Neurale netværk</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#stochastic-gradient-descent">Stochastic Gradient Descent</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#optimering">Optimering</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#smoothing-label-smoothing">Smoothing (Label Smoothing)</a>
+<ul>
+<li class="toc-entry toc-h4"><a href="#this-maximum-is-not-achievable-for-finite--zk--but-is-approached-if--zyzk--for-all--ky">This maximum is not achievable for finite  zk  but is approached if  zy≫zk  for all  k≠y</a></li>
+<li class="toc-entry toc-h4"><a href="#sidebar">Sidebar</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#fastai">Fastai</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#dataloaders">DataLoaders</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul><h1 id="breaking-googles-image-based-recaptcha-v2">
+<a class="anchor" href="#breaking-googles-image-based-recaptcha-v2" aria-hidden="true"><span class="octicon octicon-link"></span></a>Breaking Google’s Image-based reCaptcha v2</h1>
 
 <p>I dette projekt har vi valgt at vi vil forsøge at bryde Google’s reCAPTCHA v2 med et neuralt netværk.
 reCAPTCHA tester den menneskelige evne til at genkende objekter på billeder, derfor er det en oplagt opgave at forsøge at løse med et neuralt netværk.
 Mange virksomheder er for længst skiftet væk fra reCAPTCHA v2 til andre bedre alternativer, men man støder stadig ofte på denne reCAPTCHA.</p>
 
-<h2 id="collect-data">Collect Data</h2>
+<h2 id="collect-data">
+<a class="anchor" href="#collect-data" aria-hidden="true"><span class="octicon octicon-link"></span></a>Collect Data</h2>
 <p>Da vi skulle finde et datasæt til at træne vores model, prøvede vi at google “recaptcha datasæt”, for at se om der allerede var nogen der havde lavet et. 3. link førte til en github repository kaldet “recaptcha dataset” (https://github.com/brian-the-dev/recaptcha-dataset).
 Efter et nærmere kig på billederne i datasættet, viste det sig at være et rigtig godt udgangspunkt for vores projekt.
 Datasættet indeholder mere end 10.000 billeder, fordelt på 11 kategorier såsom “Bicycle”, “Crosswalk” og “Traffic Light”, som er det man ofte skal identificere i googles recaptcha.
@@ -18,7 +147,8 @@ Datasættet er dog lavet sådan, at hvert billede kun er i en kategori, og tager
 Det gjorde vi for at gøre det hurtigere at træne modellen under de indledende kode-iterationer.
 Først da vi var overbeviste om at vi havde styr på koden, trænede vi modellen op imod det fulde datasæt.</p>
 
-<h2 id="prepare-the-data">Prepare the data</h2>
+<h2 id="prepare-the-data">
+<a class="anchor" href="#prepare-the-data" aria-hidden="true"><span class="octicon octicon-link"></span></a>Prepare the data</h2>
 <p>###Opsætning af datablock
 Forberedelsen af data’en sker i vores datablock.
 Vores block er en ImageBlock som er MultiCategoryBlock. Det vil altså sige at vi vil have modellen har mulighed for at kunne genkende mere end et label på billederne.</p>
@@ -38,7 +168,8 @@ Dette skyldes bl.a. at en reCaptcha er sat op til at kunne have dårlige billede
 Som det kan ses i opsætning af datablock’en, så er de fleste værdier “default” værdier, som fastai anbefaler man benytter i første opsætning.
 Dette har vi ikke ydeligere modificeret på eftersom at vores baseline model har resulteret i en accuracy på op til 94%.</p>
 
-<h2 id="choose-the-model">Choose the model</h2>
+<h2 id="choose-the-model">
+<a class="anchor" href="#choose-the-model" aria-hidden="true"><span class="octicon octicon-link"></span></a>Choose the model</h2>
 <p>Et konventionelt neural networks network design har hver enkelte node forbundet til alle noder finding in i alle node i næste lag.
 Dette gør at backprobergationen selv skal finde mønstre og segmentere datagen.
 Med et Convolutional Neural Networks tvinger man netværket til at kun at kigge på mindre segmenter i stedet for selv at gøre det.
@@ -56,7 +187,8 @@ Vi er endt med en model det svare med Multi Category Block og bruger fastai’s 
 
 <p>![](/BreakingGooglesRecaptcha/images/Screenshot_2.png “”)</p>
 
-<h2 id="train-your-machine-model">Train your machine model</h2>
+<h2 id="train-your-machine-model">
+<a class="anchor" href="#train-your-machine-model" aria-hidden="true"><span class="octicon octicon-link"></span></a>Train your machine model</h2>
 <p>Med dataene og fremgangsmåden redegjort for, er vores projekt i træningsfasen.
 Her følger vi træningen igennem vores udvalgte data, og validerer gennem fasens epochs hvilke antagelser som modellen laver, og hvilke der ender ud med at være korrekte.</p>
 
@@ -72,7 +204,8 @@ Vi valgte at gå med Resnet50, da vi havde størst accuracy med testen undervejs
 <p>Det giver også mening at effektuere træningen ved hjælp af CNN learner’ens Learning Rate Find metode.
 Dette giver et indblik i hvordan CNN bedst kan lærer ud fra vores data på den mest ressourceeffektive måde.</p>
 
-<h2 id="evaluation">Evaluation</h2>
+<h2 id="evaluation">
+<a class="anchor" href="#evaluation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Evaluation</h2>
 <p><a href="/BreakingGooglesRecaptcha/2021/05/25/Captcha-Baseline-Model.html/">Baseline model notebook</a></p>
 
 <p>For ikke at skulle træne modellen på alle 10.000 billeder hver gang da det taget lang tid har vi lavet et datasæt der tager 20 billeder fra hver kategori.
@@ -95,10 +228,11 @@ Dette betyder at vi har lavet en model der er rigtig god til at finde en enkelt 
 
 <p>Vi har alligevel valgt at beholde denne model som vores baseline model på trods af dette da den giver et godt udgangspunkt vi kan teste vores fremtidige iterationer op imod.</p>
 
-<h2 id="tuning--optimisation">Tuning / Optimisation</h2>
-<p><a href="/BreakingGooglesRecaptcha/2021/05/25/Captcha-MixUp.html/">MixUp notebook</a><br />
-<a href="/BreakingGooglesRecaptcha/2021/05/25/Captcha-LabelSmoothing.html/">Label Smoothing v1 notebook</a><br />
-<a href="/BreakingGooglesRecaptcha/2021/05/25/Captcha-Label-Smoothing-v2.html/">Label Smoothing v2 notebook</a><br />
+<h2 id="tuning--optimisation">
+<a class="anchor" href="#tuning--optimisation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Tuning / Optimisation</h2>
+<p><a href="/BreakingGooglesRecaptcha/2021/05/25/Captcha-MixUp.html/">MixUp notebook</a><br>
+<a href="/BreakingGooglesRecaptcha/2021/05/25/Captcha-LabelSmoothing.html/">Label Smoothing v1 notebook</a><br>
+<a href="/BreakingGooglesRecaptcha/2021/05/25/Captcha-Label-Smoothing-v2.html/">Label Smoothing v2 notebook</a><br>
 <a href="/BreakingGooglesRecaptcha/2021/05/25/Captcha-Label-Correction.html/">Label Correction notebook</a></p>
 
 <p>Med vores nyoprettet baseline model, justerer vi vores forskellige parameter for at opnå det bedste resultat.
@@ -113,7 +247,8 @@ Med Mixup kan vi blande vores billeder sammen for at billederne skal genkendes i
 Når vores learner støder på et billede der er opbygget af 20 % biler og 80 % lyskryds, vil vores forventning være at den bliver bedre til at opdage flere kategorier i hvert billede, hvilket i sidste ende vil forbedre vores metode.
 Det kan desuden også diskuteres over at vores model ikke skal være perfekt, da et menneske ligeså godt kan tage fejl af et objekt i et billede, hvilket Mixup også kunne tilføje til vores model.</p>
 
-<h2 id="prediction">Prediction</h2>
+<h2 id="prediction">
+<a class="anchor" href="#prediction" aria-hidden="true"><span class="octicon octicon-link"></span></a>Prediction</h2>
 <p>Efter som vi arbejder med en Multi Category block har vi haft svært ved at bruge de mange af de redskaber vi er blevet undervist i så som confusion matrixen.
 Da vores billeder primært kun har haft et labelt på har vi under det meste af udviklen haft stor bios i visse tilfælde.
 Fx har der ofte været biler på billeder med bruger dette har fået AI’en til at være sikker på bruger frem for biler når der de har optrådt i samme billede.
@@ -123,40 +258,42 @@ I stedet for at læse html siden med Python downloade vi billedet og manuelt spl
 Vi endte med det nedenstående resultat, den fangede næsten alle cyklerne den eneste den mistede var 2,3.
 Dette kunne skyldes at vi ikke bruger hele vore dataset da vi trænede denne model men i stedet vores mindre træningssæt.</p>
 
-<p>![](/BreakingGooglesRecaptcha/images/Screenshot_3.png “”)<br />
-Image: 1, 1.jpg Prediction: [‘Bicycle’]; Bicycle Probability: 0.9659770131111145<br />
-Image: 1, 2.jpg Prediction: [‘Bicycle’]; Bicycle Probability: 0.9705190062522888<br />
+<p>![](/BreakingGooglesRecaptcha/images/Screenshot_3.png “”)<br>
+Image: 1, 1.jpg Prediction: [‘Bicycle’]; Bicycle Probability: 0.9659770131111145<br>
+Image: 1, 2.jpg Prediction: [‘Bicycle’]; Bicycle Probability: 0.9705190062522888<br>
 Image: 1, 3.jpg Prediction: [‘Bridge’]; Bicycle Probability: 4.990302880554836e-18</p>
 
-<p>![](/BreakingGooglesRecaptcha/images/Screenshot_4.png “”)<br />
-Image: 2, 1.jpg Prediction: [‘Palm’]; Bicycle Probability: 0.044423192739486694<br />
-Image: 2, 2.jpg Prediction: []; Bicycle Probability: 0.4902642071247101<br />
+<p>![](/BreakingGooglesRecaptcha/images/Screenshot_4.png “”)<br>
+Image: 2, 1.jpg Prediction: [‘Palm’]; Bicycle Probability: 0.044423192739486694<br>
+Image: 2, 2.jpg Prediction: []; Bicycle Probability: 0.4902642071247101<br>
 Image: 2, 3.jpg Prediction: []; Bicycle Probability: 0.20381507277488708</p>
 
-<p>![](/BreakingGooglesRecaptcha/images/Screenshot_5.png “”)<br />
-Image: 3, 1.jpg Prediction: [‘Palm’]; Bicycle Probability: 0.007280856370925903<br />
-Image: 3, 2.jpg Prediction: [‘Crosswalk’]; Bicycle Probability: 0.00545891746878624<br />
+<p>![](/BreakingGooglesRecaptcha/images/Screenshot_5.png “”)<br>
+Image: 3, 1.jpg Prediction: [‘Palm’]; Bicycle Probability: 0.007280856370925903<br>
+Image: 3, 2.jpg Prediction: [‘Crosswalk’]; Bicycle Probability: 0.00545891746878624<br>
 Image: 3, 3.jpg Prediction: [‘Chimney’]; Bicycle Probability: 0.003270353190600872</p>
 
 <p>Vi prøvede igen men en model der var trænet på hele vores datasæt og det så meget mere lovende ud.</p>
 
-<p>![](/BreakingGooglesRecaptcha/images/Screenshot_3.png “”)<br />
-Image: 1, 1.jpg Prediction: [‘Bicycle’]; Bicycle Probability: 0.9953802824020386<br />
-Image: 1, 2.jpg Prediction: [‘Bicycle’]; Bicycle Probability: 0.9892680048942566<br />
+<p>![](/BreakingGooglesRecaptcha/images/Screenshot_3.png “”)<br>
+Image: 1, 1.jpg Prediction: [‘Bicycle’]; Bicycle Probability: 0.9953802824020386<br>
+Image: 1, 2.jpg Prediction: [‘Bicycle’]; Bicycle Probability: 0.9892680048942566<br>
 Image: 1, 3.jpg Prediction: [‘Bridge’]; Bicycle Probability: 0.0003413711965549737</p>
 
-<p>![](/BreakingGooglesRecaptcha/images/Screenshot_4.png “”)<br />
-Image: 2, 1.jpg Prediction: [‘Palm’]; Bicycle Probability: 0.0001781134633347392<br />
-Image: 2, 2.jpg Prediction: [‘Car’]; Bicycle Probability: 0.003861015196889639<br />
+<p>![](/BreakingGooglesRecaptcha/images/Screenshot_4.png “”)<br>
+Image: 2, 1.jpg Prediction: [‘Palm’]; Bicycle Probability: 0.0001781134633347392<br>
+Image: 2, 2.jpg Prediction: [‘Car’]; Bicycle Probability: 0.003861015196889639<br>
 Image: 2, 3.jpg Prediction: [‘Bicycle’]; Bicycle Probability: 0.8249829411506653</p>
 
 <p>![](/BreakingGooglesRecaptcha/images/Screenshot_5.png “”)
-Image: 3, 1.jpg Prediction: [‘Car’]; Bicycle Probability: 0.0001316472189500928<br />
-Image: 3, 2.jpg Prediction: [‘Crosswalk’]; Bicycle Probability: 0.0038241292349994183<br />
+Image: 3, 1.jpg Prediction: [‘Car’]; Bicycle Probability: 0.0001316472189500928<br>
+Image: 3, 2.jpg Prediction: [‘Crosswalk’]; Bicycle Probability: 0.0038241292349994183<br>
 Image: 3, 3.jpg Prediction: [‘Other’]; Bicycle Probability: 0.0007099288050085306</p>
 
-<h2 id="neurale-netværk">Neurale netværk</h2>
-<h3 id="stochastic-gradient-descent">Stochastic Gradient Descent</h3>
+<h2 id="neurale-netværk">
+<a class="anchor" href="#neurale-netv%C3%A6rk" aria-hidden="true"><span class="octicon octicon-link"></span></a>Neurale netværk</h2>
+<h3 id="stochastic-gradient-descent">
+<a class="anchor" href="#stochastic-gradient-descent" aria-hidden="true"><span class="octicon octicon-link"></span></a>Stochastic Gradient Descent</h3>
 <p>For at kunne træne vores model så den kan blive bedre til at lave forudsigelser på vores data, skal vi bruge en måde at ændre vores weights.
 Dette kan gøres på flere måder men en meget brugt måde er Gradient Descent eller nærmere Stochastic Gradient Descent.
 Gradient Descent og Stochastic Gradient Descent gør det samme og er identiske på nær at man i Stochastic Gradient Descent tager lidt data og køre igennem i stedet for alt data som i Gradient Descent.
@@ -191,8 +328,10 @@ Så når vi siger at vi udregner vores gradient udregner vi i realiteten derivat
 Teknisk fortalt er derivative en funktion der beregner slope for en funktion ved en given værdi.
 Mere simpelt fortelt fortæller derivative os hvor stejl bjerget er på en given vej.</p>
 
-<h2 id="optimering">Optimering</h2>
-<h3 id="smoothing-label-smoothing">Smoothing (Label Smoothing)</h3>
+<h2 id="optimering">
+<a class="anchor" href="#optimering" aria-hidden="true"><span class="octicon octicon-link"></span></a>Optimering</h2>
+<h3 id="smoothing-label-smoothing">
+<a class="anchor" href="#smoothing-label-smoothing" aria-hidden="true"><span class="octicon octicon-link"></span></a>Smoothing (Label Smoothing)</h3>
 
 <p>Når vores model bliver trænet så er vores mål i teorien at få et resultat der bliver 1.
 Dette er resultatet på modellens “gæt” også selvom den ikke er 100% sikker.
@@ -204,7 +343,8 @@ Label smoothing sørger for at modellen kommer med et mere generaliserende gæt,
 
 <p>Når vi træner modellen vil vi stadig gerne have at alle labels til sammen giver resultatet 1, derfor erstatter vi 1 (det label som der bliver gættet på) med følgende formel: (1-𝝐+𝝐/N).</p>
 
-<h4 id="this-maximum-is-not-achievable-for-finite--zk--but-is-approached-if--zyzk--for-all--ky">This maximum is not achievable for finite  zk  but is approached if  zy≫zk  for all  k≠y</h4>
+<h4 id="this-maximum-is-not-achievable-for-finite--zk--but-is-approached-if--zyzk--for-all--ky">
+<a class="anchor" href="#this-maximum-is-not-achievable-for-finite--zk--but-is-approached-if--zyzk--for-all--ky" aria-hidden="true"><span class="octicon octicon-link"></span></a>This maximum is not achievable for finite  zk  but is approached if  zy≫zk  for all  k≠y</h4>
 <p>Hvis man går over i den teoretiske forståelse af label smoothing, så er det en matematisk algoritme (stående ovenfor) som beviser at maximum ikke er opnåeligt.</p>
 
 <p>Hvis man deler algoritmen op, så er y vores target og zy den activation som er tilhørende det target.
@@ -215,15 +355,18 @@ Dette kan resultere i at små ændringen i input (f.eks. ændring i en pixel) ka
 
 <p>Hvis man holder algoritmen op sammen med Bounded Gradient, så reducerer det modellens evne til at kunne tilpasse sig.</p>
 
-<h4 id="sidebar">Sidebar</h4>
+<h4 id="sidebar">
+<a class="anchor" href="#sidebar" aria-hidden="true"><span class="octicon octicon-link"></span></a>Sidebar</h4>
 <p>Benyttelse af Label smoothing ses ofte kun ved Single-Label.
 Selve matematikken bag Label smoothing er i første omgang tilegnet Single-Label, og man vil derfor skulle have en forståelse for at kunne ændre i selve algoritmens matematik for at kunne benytte Label smoothing ved Multi-Label.</p>
 
 <p>Det har ikke været muligt at finde nogle endnu som har knækket den matematiske kode til at benytte Label smoothing på Multi-Label.
 Den offentlige debat lyder i hvert fald på at det i det nuværende omfang ikke er muligt at benytte Label smoothing på Multi-Label modeller.</p>
 
-<h2 id="fastai">Fastai</h2>
-<h3 id="dataloaders">DataLoaders</h3>
+<h2 id="fastai">
+<a class="anchor" href="#fastai" aria-hidden="true"><span class="octicon octicon-link"></span></a>Fastai</h2>
+<h3 id="dataloaders">
+<a class="anchor" href="#dataloaders" aria-hidden="true"><span class="octicon octicon-link"></span></a>DataLoaders</h3>
 <p>DataLoaders er en meget simpel klasse, som bare wrapper/indeholder en række DataLoader objekter.
 Det er dog den som står for at levere data til modellen, og det er derfor en meget central del af FastAI.</p>
 
@@ -248,3 +391,36 @@ De indbyggede transforms inkluderer fx cropping og resizing af billeder.</p>
 <p>Som et alternativ til item transforms, kan man bruge batch transforms.
 Med en batch transform kører man i stedet noget kode på hele batchen i stedet for hvert individuelt billede, hvilket kan være hurtigere at udføre. 
 transform kan fx bruges i forbindelse med data augmentation af billeder, efter de er blevet croppet og/eller resizet til alle at være den samme størrelse.</p>
+
+  </div><a class="u-url" href="/BreakingGooglesRecaptcha/markdown/2021/05/25/Breaking-Google-s-Image-based-reCaptcha-v2.html" hidden></a>
+</article>
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/BreakingGooglesRecaptcha/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="/BreakingGooglesRecaptcha/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/BreakingGooglesRecaptcha/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>An easy to use blogging platform with support for Jupyter Notebooks.</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"><li><a rel="me" href="https://github.com/fastai" title="fastai"><svg class="svg-icon grey"><use xlink:href="/BreakingGooglesRecaptcha/assets/minima-social-icons.svg#github"></use></svg></a></li><li><a rel="me" href="https://twitter.com/fastdotai" title="fastdotai"><svg class="svg-icon grey"><use xlink:href="/BreakingGooglesRecaptcha/assets/minima-social-icons.svg#twitter"></use></svg></a></li></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
