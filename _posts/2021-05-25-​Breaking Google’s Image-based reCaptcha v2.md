@@ -5,7 +5,6 @@ description: Breaking Google’s Image-based reCaptcha v2.
 categories: [markdown]
 title: Breaking Google’s Image-based reCaptcha v2
 ---
-# Breaking Google’s Image-based reCaptcha v2
 
 I dette projekt har vi valgt at vi vil forsøge at bryde Google’s reCAPTCHA v2 med et neuralt netværk.
 reCAPTCHA tester den menneskelige evne til at genkende objekter på billeder, derfor er det en oplagt opgave at forsøge at løse med et neuralt netværk.
@@ -227,7 +226,8 @@ Label smoothing sørger for at modellen kommer med et mere generaliserende gæt,
 
 Når vi træner modellen vil vi stadig gerne have at alle labels til sammen giver resultatet 1, derfor erstatter vi 1 (det label som der bliver gættet på) med følgende formel: (1-𝝐+𝝐/N).
 
-#### This maximum is not achievable for finite  zk  but is approached if  zy≫zk  for all  k≠y
+**This maximum is not achievable for finite  zk  but is approached if  zy≫zk  for all  k≠y**
+
 Hvis man går over i den teoretiske forståelse af label smoothing, så er det en matematisk algoritme (stående ovenfor) som beviser at maximum ikke er opnåeligt.
 
 Hvis man deler algoritmen op, så er y vores target og zy den activation som er tilhørende det target.
