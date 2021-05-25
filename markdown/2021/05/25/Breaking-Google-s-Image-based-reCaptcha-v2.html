@@ -77,7 +77,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      18 min read
+      17 min read
     
 </span></p>
 
@@ -94,8 +94,6 @@ window.onload = wrap_img;
 
   <div class="post-content e-content" itemprop="articleBody">
     <ul class="section-nav">
-<li class="toc-entry toc-h1"><a href="#breaking-googles-image-based-recaptcha-v2">Breaking Google’s Image-based reCaptcha v2</a>
-<ul>
 <li class="toc-entry toc-h2"><a href="#collect-data">Collect Data</a></li>
 <li class="toc-entry toc-h2"><a href="#prepare-the-data">Prepare the data</a>
 <ul>
@@ -118,7 +116,6 @@ window.onload = wrap_img;
 <ul>
 <li class="toc-entry toc-h3"><a href="#smoothing-label-smoothing">Smoothing (Label Smoothing)</a>
 <ul>
-<li class="toc-entry toc-h4"><a href="#this-maximum-is-not-achievable-for-finite--zk--but-is-approached-if--zyzk--for-all--ky">This maximum is not achievable for finite  zk  but is approached if  zy≫zk  for all  k≠y</a></li>
 <li class="toc-entry toc-h4"><a href="#sidebar">Sidebar</a></li>
 </ul>
 </li>
@@ -129,12 +126,7 @@ window.onload = wrap_img;
 <li class="toc-entry toc-h3"><a href="#dataloaders">DataLoaders</a></li>
 </ul>
 </li>
-</ul>
-</li>
-</ul><h1 id="breaking-googles-image-based-recaptcha-v2">
-<a class="anchor" href="#breaking-googles-image-based-recaptcha-v2" aria-hidden="true"><span class="octicon octicon-link"></span></a>Breaking Google’s Image-based reCaptcha v2</h1>
-
-<p>I dette projekt har vi valgt at vi vil forsøge at bryde Google’s reCAPTCHA v2 med et neuralt netværk.
+</ul><p>I dette projekt har vi valgt at vi vil forsøge at bryde Google’s reCAPTCHA v2 med et neuralt netværk.
 reCAPTCHA tester den menneskelige evne til at genkende objekter på billeder, derfor er det en oplagt opgave at forsøge at løse med et neuralt netværk.
 Mange virksomheder er for længst skiftet væk fra reCAPTCHA v2 til andre bedre alternativer, men man støder stadig ofte på denne reCAPTCHA.</p>
 
@@ -352,8 +344,8 @@ Label smoothing sørger for at modellen kommer med et mere generaliserende gæt,
 
 <p>Når vi træner modellen vil vi stadig gerne have at alle labels til sammen giver resultatet 1, derfor erstatter vi 1 (det label som der bliver gættet på) med følgende formel: (1-𝝐+𝝐/N).</p>
 
-<h4 id="this-maximum-is-not-achievable-for-finite--zk--but-is-approached-if--zyzk--for-all--ky">
-<a class="anchor" href="#this-maximum-is-not-achievable-for-finite--zk--but-is-approached-if--zyzk--for-all--ky" aria-hidden="true"><span class="octicon octicon-link"></span></a>This maximum is not achievable for finite  zk  but is approached if  zy≫zk  for all  k≠y</h4>
+<p><strong>This maximum is not achievable for finite  zk  but is approached if  zy≫zk  for all  k≠y</strong></p>
+
 <p>Hvis man går over i den teoretiske forståelse af label smoothing, så er det en matematisk algoritme (stående ovenfor) som beviser at maximum ikke er opnåeligt.</p>
 
 <p>Hvis man deler algoritmen op, så er y vores target og zy den activation som er tilhørende det target.
