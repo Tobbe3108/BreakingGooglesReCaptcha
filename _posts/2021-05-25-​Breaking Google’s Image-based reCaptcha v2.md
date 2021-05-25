@@ -89,7 +89,7 @@ Dette giver et indblik i hvordan CNN bedst kan lærer ud fra vores data på den 
 
 
 ## Evaluation
-[Baseline model notebook](https://tobbe3108.github.io/BreakingGooglesRecaptcha/2021/05/23/Captcha-Baseline-Model.html)
+[Baseline model notebook](https://tobbe3108.github.io/BreakingGooglesRecaptcha/2021/05/25/Captcha-Baseline-Model.html)
 
 For ikke at skulle træne modellen på alle 10.000 billeder hver gang da det taget lang tid har vi lavet et datasæt der tager 20 billeder fra hver kategori.
 Dette datasæt har vi efterfølgende brugt til vores aktive udvikling.
@@ -114,10 +114,10 @@ Vi har alligevel valgt at beholde denne model som vores baseline model på trods
 
 
 ## Tuning / Optimisation
-[MixUp notebook](https://tobbe3108.github.io/BreakingGooglesRecaptcha/2021/05/23/Captcha-MixUp.html)  
-[Label Smoothing v1 notebook](https://tobbe3108.github.io/BreakingGooglesRecaptcha/2021/05/23/Captcha-LabelSmoothing.html)  
-[Label Smoothing v2 notebook](https://tobbe3108.github.io/BreakingGooglesRecaptcha/2021/05/23/Captcha-Label-Smoothing-v2.html)  
-[Label Correction notebook](https://tobbe3108.github.io/BreakingGooglesRecaptcha/2021/05/23/Captcha-Label-Correction.html) 
+[MixUp notebook](https://tobbe3108.github.io/BreakingGooglesRecaptcha/2021/05/25/Captcha-MixUp.html)  
+[Label Smoothing v1 notebook](https://tobbe3108.github.io/BreakingGooglesRecaptcha/2021/05/25/Captcha-LabelSmoothing.html)  
+[Label Smoothing v2 notebook](https://tobbe3108.github.io/BreakingGooglesRecaptcha/2021/05/25/Captcha-Label-Smoothing-v2.html)  
+[Label Correction notebook](https://tobbe3108.github.io/BreakingGooglesRecaptcha/2021/05/25/Captcha-Label-Correction.html) 
 
 Med vores nyoprettet baseline model, justerer vi vores forskellige parameter for at opnå det bedste resultat.
 For at sikre imod at vores model blev for sikker og “overfitted”, brugte vi Label Smoothing undervejs i træningen for at gøre modellen mere modtagelig over for et mere nuanceret gæt i sidste ende, sådan at modellen kan være bedre til at gætte på andre mulige resultater i de billeder, som vi skal genkende.
